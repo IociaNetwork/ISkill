@@ -9,13 +9,13 @@ import org.bukkit.event.entity.EntityDeathEvent;
 public class AttackSkill<T> extends BasicSkill<T> implements Listener {
 
     /*---Data---*/
-    private static final ISkillMain mainInstance = ISkillMain.getMain();
+    private static final ISkillMain MAIN_INSTANCE = ISkillMain.getMain();
 
     /*---Constructors---*/
     private AttackSkill(Builder<T> builder) {
         super(builder.id, builder.displayName);
         if (builder.eventsEnabled)
-            mainInstance.getServer().getPluginManager().registerEvents(this, mainInstance);
+            MAIN_INSTANCE.getServer().getPluginManager().registerEvents(this, MAIN_INSTANCE);
     }
 
     /*---Methods---*/
