@@ -5,7 +5,7 @@ import iocia.network.minecraft.plugins.iskill.entities.BaseSkill;
 abstract class BasicSkill<T> extends BaseSkill<T> {
 
     /*---Data---*/
-    private static final int level = 200;
+    private static final int LEVEL = 200;
 
     /*---Constructors---*/
     BasicSkill(T id, String displayName) {
@@ -14,7 +14,7 @@ abstract class BasicSkill<T> extends BaseSkill<T> {
 
     /*---Methods---*/
     public int getMaxLevel() {
-        return level;
+        return LEVEL;
     }
 
     public int convertXpToLevel(long xp) {
