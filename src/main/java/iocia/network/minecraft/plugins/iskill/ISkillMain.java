@@ -1,4 +1,4 @@
-package iocia.minecraft.network.iskill;
+package iocia.network.minecraft.plugins.iskill;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
