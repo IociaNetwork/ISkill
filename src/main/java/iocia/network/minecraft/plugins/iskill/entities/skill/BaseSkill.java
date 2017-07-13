@@ -1,6 +1,6 @@
 package iocia.network.minecraft.plugins.iskill.entities.skill;
 
-public abstract class BaseSkill<T> implements Skill<T> {
+public abstract class BaseSkill implements Skill {
 
     /*---Data---*/
     private final String displayName;
