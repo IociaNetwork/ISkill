@@ -3,12 +3,6 @@ package iocia.network.minecraft.plugins.iskill.entities;
 interface Skill<T> {
 
     /**
-     * Gets the Id of the skill.
-     * @return Id of the skill.
-     */
-    T getId();
-
-    /**
      * Gets the display name of the skill. This is a user-friendly name
      * which the end player will see.
      * @return Display name of the skill.
