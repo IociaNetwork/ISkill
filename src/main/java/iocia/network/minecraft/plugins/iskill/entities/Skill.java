@@ -1,6 +1,6 @@
 package iocia.network.minecraft.plugins.iskill.entities;
 
-public interface Skill<T> {
+interface Skill<T> {
 
     /**
      * Gets the Id of the skill.
