@@ -1,4 +1,4 @@
-package iocia.network.minecraft.plugins.iskill.entities;
+package iocia.network.minecraft.plugins.iskill.entities.skill;
 
 public abstract class BaseSkill<T> implements Skill<T> {
 

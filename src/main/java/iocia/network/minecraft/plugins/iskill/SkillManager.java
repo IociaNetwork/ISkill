@@ -1,6 +1,6 @@
 package iocia.network.minecraft.plugins.iskill;
 
-import iocia.network.minecraft.plugins.iskill.entities.Skill;
+import iocia.network.minecraft.plugins.iskill.entities.skill.Skill;
 
 import java.util.HashMap;
 import java.util.Map;
