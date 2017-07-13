@@ -1,6 +1,6 @@
 package iocia.network.minecraft.plugins.iskill.entities;
 
-interface Skill<T> {
+public interface Skill<T> {
 
     /**
      * Gets the display name of the skill. This is a user-friendly name
