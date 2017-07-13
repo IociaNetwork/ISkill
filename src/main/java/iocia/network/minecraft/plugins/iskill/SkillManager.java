@@ -1,9 +1,11 @@
 package iocia.network.minecraft.plugins.iskill;
 
+import iocia.network.minecraft.plugins.iskill.entities.player.SkillSet;
 import iocia.network.minecraft.plugins.iskill.entities.skill.Skill;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * Responsible for maintaining a master collection of all
@@ -13,7 +15,9 @@ import java.util.Map;
 public class SkillManager<T> {
 
     /*---Data---*/
-    private Map<T, Skill> registeredSkill = new HashMap<T, Skill>();
+    private boolean committed = false;
+    private Map<T, Skill> registeredSkills = new HashMap<>();
+    private Map<UUID, SkillSet<T>> playerSkillSet = new HashMap<>();
 
     /*---Constructors---*/
     public SkillManager() {
@@ -22,9 +26,11 @@ public class SkillManager<T> {
 
     /*---Methods---*/
     public void registerSkill(T id, Skill skill) throws IllegalArgumentException {
-        if (registeredSkill.containsKey(id))
+        if (committed)
+            throw new IllegalStateException("Skill manager has been committed. No new skills may be registered.");
+        if (registeredSkills.containsKey(id))
             throw new IllegalArgumentException("A skill has already been registered with the given ID");
-        registeredSkill.put(id, skill);
+        registeredSkills.put(id, skill);
     }
 
 }

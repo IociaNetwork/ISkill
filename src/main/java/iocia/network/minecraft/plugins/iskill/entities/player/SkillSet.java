@@ -3,7 +3,7 @@ package iocia.network.minecraft.plugins.iskill.entities.player;
 import java.util.HashMap;
 import java.util.Map;
 
-class SkillSet<T> {
+public class SkillSet<T> {
 
     /*---Data---*/
     private final Map<T, EXPEntity> skills;
@@ -24,7 +24,7 @@ class SkillSet<T> {
 
         public Builder addSkill(TKey skillId, EXPEntity entity) {
             if (skills.containsKey(skillId))
-                throw new IllegalArgumentException("A skill with the same Id has already been to the skill set");
+                throw new IllegalArgumentException("A skill with the same Id has already been added to the skill set");
             skills.put(skillId, entity);
             return this;
         }
